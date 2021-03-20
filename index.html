@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <link rel="icon" type="image/png"  href="images/favicon.png">
+  <title>MASCOTA COOL!!</title>
+  <meta name="google-site-verification" content="" />
+<meta name="description" content="venta de productos y servicios para mascotas quito">
+<meta name="keywords" content="venta de accesorios para mascotas,mascotas quito, mascotas santa clara, alimento perros quito, balanceados mascotas, correas para perros, gatos quito, alimento para gatos, alimento perros premium quito, nutrapro para perros, peluqueria para perros, peluqueria para gatos quito, productos veterinarios quito, baño para perros y gatos, bañamos gatos en quito,baño para gatos quito, vacunamos perros y gatos santa clara quito, adiestramiento quito">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/jquery.fancybox-1.3.4.css" type="text/css" media="all">
+  <script type="text/javascript" src="js/jquery-1.7.1.js" ></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+  <!-- write your code here -->
+<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+<script src="js/visionmision.js"></script>
+<script>
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function init() {
+	canvas = document.getElementById("canvas");
+	anim_container = document.getElementById("animation_container");
+	dom_overlay_container = document.getElementById("dom_overlay_container");
+	var comp=AdobeAn.getComposition("D6E4C9B493EE6443A15CF42E74F161A0");
+	var lib=comp.getLibrary();
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
+	loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+	var lib=comp.getLibrary();
+	loader.loadManifest(lib.properties.manifest);
+}
+function handleFileLoad(evt, comp) {
+	var images=comp.getImages();	
+	if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
+}
+function handleComplete(evt,comp) {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	var lib=comp.getLibrary();
+	var ss=comp.getSpriteSheet();
+	var queue = evt.target;
+	var ssMetadata = lib.ssMetadata;
+	for(i=0; i<ssMetadata.length; i++) {
+		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+	}
+	exportRoot = new lib.visionmision();
+	stage = new lib.Stage(canvas);	
+	//Registers the "tick" event listener.
+	fnStartAnimation = function() {
+		stage.addChild(exportRoot);
+		createjs.Ticker.framerate = lib.properties.fps;
+		createjs.Ticker.addEventListener("tick", stage);
+	}	    
+	//Code to support hidpi screens and responsive scaling.
+	AdobeAn.makeResponsive(false,'both',false,1,[canvas,anim_container,dom_overlay_container]);	
+	AdobeAn.compositionLoaded(lib.properties.id);
+	fnStartAnimation();
+}
+</script>
+<!-- write your code here -->
+</head>
+<body onload="init();" style="margin:0px;">
+	<div class="glob">
+<div class="page_spinner"></div>  
+<div class="main">
+    <div class="center"> 
+   <!--header -->                   
+ <div class="headerHolder">
+       <header>
+		   
+       <div class="logoHolder">
+            <h1><a href="#!/pageGallery" id="logo">logo</a></h1>
+       </div>
+        </header>
+	 	
+        <div class="followHolder"><div class="botonwhats"><a href="https://api.whatsapp.com/send?phone=593998741295&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20peluquería%20y%20el%20alimento%20para%20mascotas.%20GRACIAS." target="_blank" rel="nofollow"><img src="images/whatsapp.png"></a></div>
+                        
+                            <ul>
+                                <li>
+								<a href="https://tiktok.com" target="_blank" rel="nofollow"><img src="images/tiktokfollowicon.png" alt=""></a>
+								</li>
+                                <li>
+								<a href="https://www.facebook.com/Mascota-Cool-108111497755668" target="_blank" rel="nofollow">
+									<img src="images/followIcon2.png" alt="">
+								</a>
+								</li>
+                                <li>
+								<a href="https://instagram.com" target="_blank" rel="nofollow"><img src="images/instagramico.png" alt="">
+								</a>
+								</li>
+								<li>
+								<a href="#"><img src="images/precios.png" alt="">
+								</a>
+								</li>
+								<li>
+								<a href="https://www.who.int/es" target="_blank" rel="nofollow"><img src="images/covid19.png" alt="">
+								</a>
+								</li>
+
+								<p><a class="encuentralotu"#"LLÁMANOS!! cell:"</a></p><p>telf: +593-998741295</p>        
+                            </ul>
+    	  </div>
+ </div>
+<!--header end--> 
+    
+            <div class="menuHolder">
+            <nav class="menu">
+				    	<ul id="menu"> 
+					       	
+                            <li class="with_ul"><a href="#!/pageAbout"><span class="overPlane"></span><span class="mText">Nosotros</span></a>
+                                   
+                                    <ul class="submenu_1">
+                                	   <li><a href="#!/pagebienvenidos">Bienvenido</a></li>
+                                	   <li><a href="#!/pagemision">Nuestra Misión</a></li>
+                                	   <li><a href="#!/pagehistoria">Historia</a></li>
+                                    </ul>
+
+                            </li>
+                             <li><a href="#!/pageServices"><span class="overPlane"></span><span class="mText">servicios</span></a></li>
+                             <li><a href="#!/pageGallery"><span class="overPlane"></span><span class="mText">galería</span></a></li>
+                             <li><a href="#!/pagePrivacy"><span class="overPlane"></span><span class="mText">la empresa</span></a></li>
+                             <li><a href="#!/pageContact"><span class="overPlane"></span><span class="mText">contactos</span></a></li>
+					   </ul>
+				    </nav>
+                 </div> 
+			<!--content -->
+			<article id="content">
+             <div class="iconHolder">
+         <div id="img_slider">
+            <ul>
+                <li>
+                    <div class="picHold"><a class="pic" rel="Appendix" href="images/alimentogato.jpg"><span class="zoomSp"></span><img src="images/galleryIcon1.jpg" alt=""></a></div>
+                    <div class="picHold"><a class="pic" rel="Appendix" href="images/imageblankcompras.png"><span class="zoomSp"></span><img src="images/galleryIcon2.jpg" alt=""></a></div>
+                    <div class="picHold"><a class="pic" rel="Appendix" href="images/imageblankcompras.png"><span class="zoomSp"></span><img src="images/galleryIcon3.jpg" alt=""></a></div>
+                </li>
+                <li>
+                    <div class="picHold"><a class="pic" rel="Appendix" href="images/collageperros.jpg"><span class="zoomSp"></span><img src="images/galleryIcon4.jpg" alt=""></a></div>
+                    <div class="picHold"><a class="pic" rel="Appendix" href="images/preciosweb.png"><span class="zoomSp"></span><img src="images/redsustentable.png" alt=""></a></div>
+                    <div class="picHold"><a class="pic" rel="Appendix" href="images/adopcion.png"><span class="zoomSp"></span><img src="images/galleryIcon6.jpg" alt=""></a></div>
+                </li>
+                <li>
+                    <div class="picHold"><a class="pic" rel="Appendix" href="images/collagepeluqueria.jpg"><span class="zoomSp"></span><img src="images/galleryIcon7.jpg" alt=""></a></div>
+                    <div class="picHold"><a class="pic" rel="Appendix" href="images/imageblankcompras.png"><span class="zoomSp"></span><img src="images/galleryIcon8.jpg" alt=""></a></div>
+                    <div class="picHold"><a class="pic" rel="Appendix" href="images/veterinariasmarzo.png"><span class="zoomSp"></span><img src="images/galleryIcon9.jpg" alt=""></a></div>
+                </li>
+                <li>
+                    <div class="picHold"><a class="pic" rel="Appendix" href="images/imageblankcompras.png"><span class="zoomSp"></span><img src="images/galleryIcon1.jpg" alt=""></a></div>
+                    <div class="picHold"><a class="pic" rel="Appendix" href="images/imageblankcompras.png"><span class="zoomSp"></span><img src="images/galleryIcon2.jpg" alt=""></a></div>
+                    <div class="picHold"><a class="pic" rel="Appendix" href="images/imageblankcompras.png"><span class="zoomSp"></span><img src="images/galleryIcon3.jpg" alt=""></a></div>
+                </li>
+                <li>
+                    <div class="picHold"><a class="pic" rel="Appendix" href="images/collageperros.jpg"><span class="zoomSp"></span><img src="images/galleryIcon4.jpg" alt=""></a></div>
+                    <div class="picHold"><a class="pic" rel="Appendix" href="images/preciosweb.png"><span class="zoomSp"></span><img src="images/redsustentable.png" alt=""></a></div>
+                    <div class="picHold"><a class="pic" rel="Appendix" href="images/adopcion.png"><span class="zoomSp"></span><img src="images/galleryIcon6.jpg" alt=""></a></div>
+                </li>
+                <li>
+                    <div class="picHold"><a class="pic" rel="Appendix" href="images/collagepeluqueria.jpg"><span class="zoomSp"></span><img src="images/galleryIcon7.jpg" alt=""></a></div>
+                    <div class="picHold"><a class="pic" rel="Appendix" href="images/imageblankcompras.png"><span class="zoomSp"></span><img src="images/galleryIcon8.jpg" alt=""></a></div>
+                    <div class="picHold"><a class="pic" rel="Appendix" href="images/veterinariasmarzo.png"><span class="zoomSp"></span><img src="images/galleryIcon9.jpg" alt=""></a></div>
+                </li>
+               <li>
+                    <div class="picHold"><a class="pic" rel="Appendix" href="images/collageperros.jpg"><span class="zoomSp"></span><img src="images/galleryIcon4.jpg" alt=""></a></div>
+                    <div class="picHold"><a class="pic" rel="Appendix" href="images/adopcion.png">
+					<span class="zoomSp"></span><img src="images/galleryIcon6.jpg" alt=""></a></div>
+                    <div class="picHold"><a class="pic" rel="Appendix" href="images/preciosweb.png"><span class="zoomSp"></span><img src="images/redsustentable.png" alt=""></a></div>
+                </li>
+             
+            </ul>
+            
+        </div>
+            <a href="#" id="next"><img src="images/gallNext1.png" alt=""></a>
+            <a href="#" id="prev"><img src="images/gallPrev1.png" alt=""></a>
+    </div>
+				<ul>
+					
+                     <li id="pageAbout">
+					   <div class="box">
+                            <div class="closePlane">
+                                <a class="closeButton" href="#!/pageGallery"><img src="images/closeIcon.png" alt=""></a>
+                            </div>
+                            <div class="containerContent">
+                                <h2>Imagen para mascotas!</h2>
+                                <div class="col1 padBot1">
+                                    <figure class="_fig1">
+                                        <img src="images/page1pic1.png" alt="">
+                                    </figure>
+                                    <div class="col2">
+                                        <p>Mascota Cool baño y peluquería. <a class="_link1" href="http://mascotacool2020.github.io/inicio" target="_blank" rel="nofollow">Encuentra una gran variedad de productos para mascotas.
+									   </a>
+					<p> Encuentra el perfil del creador de la página aquí:<div class="col1 padBot2">
+                                    <div class="col3 bord1 magRight1">
+                                        <ul class="_list1">
+                                            <li><a href="https://mascotacool2020.github.io/inicio" target="_blank rel="nofollow">C.VITAE del Creador del sitio Web
+												</a>
+											</li>
+                                        	<li><a href="#">J.F. Aguirre Tamayo
+												</a>
+											</li></div></div></a></p><p>Fabricio Aguirre (CurricullumVITAE).</a></p>
+                                    </div>
+                                </div>
+                                <div class="col1 padBot2">
+                                    <div class="col3 bord1 magRight1">
+                                        <ul class="_list1">
+                                            <li><a href="#">Recetas en la WEB acondicionadores</a></li>
+                                        <li><a href="#">wEBINAR  Tablas con función marque</a></li>
+                                            <li><a href="#">Duo dolores et sed diam rebum</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col3">
+                                        <ul class="_list1">
+                                            <li><a href="#">Ipsum dolor sit amet consetetur</a></li>
+                                            <li><a href="#">Sadipscing elitr clitasdd diam nonumy</a></li>
+                                            <li><a href="#">At vero eos et accusam et justo</a></li>
+					</ul>
+                                    </div>
+                                </div>
+                                    <a class="moreButton" href="#!/pageMore">Leer ...</a>
+                                
+                            </div>
+                       </div>	
+					</li>
+                     <li id="pageServices">
+					   <div class="box">
+                     
+                            <div class="closePlane">
+                                <a class="closeButton" href="#!/pageGallery"><img src="images/closeIcon.png" alt=""></a>
+                            </div>
+                       
+                            <div class="containerContent">
+                                <h2>Qué es lo que hacemos</h2>
+                                <div class="col1 padBot3">
+                                    <div class="col4 magRight2">
+                                        <h3><a class="_link3" href="#">Tienda para Mascotas</a></h3>
+                                        <p>Encuentra una gran variedad de productos para la satisfacción complementaria de nuestras mascotas en casa y fuera de ella.</p>
+                                    </div>
+                                    <div class="col4">
+                                        <h3><a class="_link3" href="#">Alimentos</a></h3>
+                                        <p>La felicidad y salud de nuestros amigos de 4 patas, depende de una correcta alimentación. Te ayudamos con la recomendación óptima para su desarrollo.</p>
+                                    </div>
+                                </div>
+                                 <div class="col1">
+                                    <div class="col4 magRight2">
+                                        <h3><a class="_link3" href="#">Baño y Peluquería</a></h3>
+                                        <p>Su pelaje es factor importante, lo cuidamos, lo mimamos, te damos las mejores recomendaciones para su cuidado y mantenimiento. </p>
+										<h3><a class="_link3" href="#">Preguntas Frecuentes</a></h3>
+                                    </div>
+                                    <div class="col4">
+                                        <h3><a class="_link3" href="#">Recomendaciones para tenencia responsable de mascotas</a></h3>
+                                        <p>Es deber de nosotros como sus guardianes, conocer la manera óptima y más adecuada de cómo mantener responsablemente a nuestras mascotas.</p>
+                                    </div>
+                                </div>
+                              
+                                
+                            </div>
+                       </div>	
+					</li>
+                   <li id="pageGallery">
+                   
+					
+					</li>
+                    
+                    <li id="pagePrivacy">
+                    	   <div class="box">
+                                <div class="closePlane">
+                                    <a class="closeButton" href="#!/pageGallery"><img src="images/closeIcon.png" alt=""></a>
+                             </div>
+                            <div class="containerContent">
+                            <h2><p>Políticas de Privacidad y Condiciones </p> Mascota Cool 2021</p></h2>
+                                <div class="col1">
+                                    <div class="Btns1">
+                                        <a href="#" class="upBtn"></a>
+                                        <a href="#" class="downBtn"></a>
+                                    </div>
+                                    <div class="scroll1">
+                                       
+                                        <p class="padBot4">Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                        <p class="padBot4">At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus. Duis autem vel eum iriure dolor in hendrerit.</p>
+                                        <p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                    </div>
+                                </div> 
+                            </div>
+                       </div>
+                    </li>
+                    
+                    <li id="pageContact">
+					   <div class="box">
+                         <div class="closePlane">
+                                <a class="closeButton" href="#!/pageGallery"><img src="images/closeIcon.png" alt=""></a>
+                            </div>
+                            
+                          <div class="containerContent">
+                            <div class="col5 magRight3">
+                            <h2>escríbenos</h2>
+                                <div class="wrapper">
+                                        <form action="#" id="ContactForm">	
+                                        <div class="success"> Formulario enviado con exito!&nbsp;Nos pondremos en contacto muy pronto. Espera por nuestras promociones!.</div>	
+       								 		<fieldset class="left">	
+                                                        <div class="block">
+                                                        <label class="name padRight3">
+                                                            <span class="title1">Nombre:</span>
+                                                            <span class="bg"><input type="text" value="" class="input"></span>
+                                                            <span class="error">*No es un nombre valido.</span> <span class="empty">*Este espacio es requerido.</span> </label>
+        											     <label class="email">
+                                                            <span class="title1">E-mail:</span>
+            											    <span class="bg"><input type="email" value="" class="input"></span>
+            											    <span class="error">*Esta no es una dirección de e-mail valida.</span> <span class="empty">*Este campo es requerido.</span></label>   
+                                                         
+                                                         <label class="phone">
+                                                         <span class="title1">Teléfono:</span>
+                                                            <span class="bg"><input type="tel" value="" class="input"></span>
+                                                            <span class="error">*Este número no ha sido validado.</span> <span class="empty">*Este campo es requerido.</span> </label>
+                                                         </div>
+                                                         
+                                                         <div class="block">
+                                                         <label class="message">
+                                                         <span class="title1">Mensaje:</span>
+            											    <span class="bg"><textarea rows="1" cols="2"></textarea></span>
+            											    <span class="error">*El mensaje es muy corto.</span> <span class="empty">*Este campo es requerido.</span> </label>
+        										         </div>
+                                                         <div class="formButtons">
+                                                          <div class="formBtn">
+                                                                <a href="#" data-type="submit" class="moreButton">Enviar</a>
+                                                          </div>
+                                                          <div class="formBtn">
+                                                                 <a href="#" data-type="reset" class="moreButton">Borrar</a>
+                                                          </div>
+                                                         </div> 
+    								  		    </fieldset>
+                                            </form>
+                                    </div>
+                            </div>  
+                            <div class="col5">
+                                <h2>Contacto</h2>
+                                <div class="padBot5">
+                                        <figure class="googlemap"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1186.1727407706485!2d-78.50003774760913!3d-0.2016007715970353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a4077c10de7%3A0xc16b13276b85266b!2zMMKwMTInMDUuNSJTIDc4wrAyOSc1OS44Ilc!5e0!3m2!1sen!2sus!4v1614008688057!5m2!1sen!2sus" width="270" height="210" style="border:0;" allowfullscreen="" loading="lazy"></iframe></figure> 
+                                    </div>
+                               <div class="col5">
+                                    <p>
+                                        <span>Jerónimo Carrión, Oe3-51 y Versalles<br>Santa Clara, QUITO-ECUADOR.</span><br>
+                                        <span class="space1">Teléfono:</span>0998741295 -  0983113678<br>
+                                        <span>E-mail:&nbsp;<a class="_link1" href="mailto:">mascotacool2020@gmail.com</a></span>
+										<div class="botonwhats"><a href="https://api.whatsapp.com/send?phone=593998741295&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20peluquería%20y%20el%20alimento%20para%20mascotas.%20GRACIAS."><img src="images/whatsapp.png" alt=""></a></div>
+                                    </p>
+                               </div>
+                            </div>     
+                        </div>
+                       </div>	
+					</li>
+                  
+ <li id="pagebienvenidos">
+                    	 <div class="box">
+                                <div class="closePlane">
+                                    <a class="closeButton" href="#!/pageGallery"><img src="images/closeIcon.png" alt=""></a>
+                             </div>
+                            <div class="containerContent">
+                            <h2>Compartamos este sueño</h2>
+                                <div class="col1">
+                                    <div class="Btns2">
+                                        <a href="#" class="upBtn"></a>
+                                        <a href="#" class="downBtn"></a>
+                                    </div>
+                                    <div class="scroll2">
+                                       
+                                        <p class="padBot4">Bienvenidos a nuestro espacio en la red en donde podremos intercambiar conocimientos sobre nuestros mejores amigos y poder ser voz de quiénes no pueden decirnos con palabras lo que necesitan.</p>
+                                        <p class="padBot4">Sómos sus guardianes y debemos hacer todo lo posible para que ellos, que son nuestros ángeles, mantengan una vida sana y llena de cuidados para bien tanto nuestro, como de nuestra comunidad.</p>
+                                        <p>Ser más para servir mejor</p>
+					<p>Ignacio de Loyola</p>
+					<p><div class="col1 padBot1">
+                                    <figure class="_fig1">
+                                        <img src="images/pawsvela.png" alt="">
+                                    </figure></p>
+                                    </div>
+                                </div> 
+                            </div>
+                       </div>
+                    </li>
+<li id="pagemision">
+                    	 <div class="box">
+                                <div class="closePlane">
+                                    <a class="closeButton" href="#!/pageGallery"><img src="images/closeIcon.png" alt=""></a>
+                             </div>
+                            <div class="containerContent">
+                            <h2>Misión y Visión</h2>
+                                <div class="col1">
+                                    <div class="Btns2">
+                                        <a href="#" class="upBtn"></a>
+                                        <a href="#" class="downBtn"></a>
+                                    </div>
+                                    <div class="scroll2">
+                                       
+                                        <p class="padBot4">Nuestra Misión es encontrar el punto exacto de equilibrio entre belleza y elegancia acordes a estandares raciales tanto caninos como felinos.</p>
+                                        <p class="padBot4">...</p>
+                                        <p>La Visión que tenemos es que logremos comprender la interacción que tenemos con nuestras máscotas, qué podamos adoptar costumbres de sociabilización con nuestros amigos y logrémos desarrollo comunitario para que todos tengamos armonía.</p>
+					<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:550px; height:95px">
+					<canvas id="canvas" width="550" height="95" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+					<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:550px; height:95px; position: absolute; left: 0px; top: 0px; display: block;">
+					</div>
+	</div>
+                                    </div>
+                                </div> 
+                            </div>
+                       </div>
+                    </li>
+<li id="pagehistoria">
+                    	 <div class="box">
+                                <div class="closePlane">
+                                    <a class="closeButton" href="#!/pageGallery"><img src="images/closeIcon.png" alt=""></a>
+                             </div>
+                            <div class="containerContent">
+                            <p><h2>HISTORIA</h2></p><p>INICIO Y TAREAS</p><p> COMPLEMENTARIAS</p>
+                                <div class="col1">
+                                    <div class="Btns2">
+                                        <a href="#" class="upBtn"></a>
+                                        <a href="#" class="downBtn"></a>
+                                    </div>
+                                    <div class="scroll2">
+                                       
+                                        <p class="padBot4">...</p>
+                                        <p class="padBot4">La empresa abre sus puertas en plena pandemia, junio 2020, cuando la situación se encontraba en un estado de alta tensión.</p>
+                                        <p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                    </div>
+                                </div> 
+                            </div>
+                       </div>
+                    </li>
+				</ul>
+			</article>
+			<!--content end-->
+                  <!--footer -->
+				  <!--content -->
+				<footer>
+				<!-- {%FOOTER_LINK} -->
+                <div class="mainFooter">
+                <td colspan="3"><h6><marquee behavior="alternate">Todos los Derechos Reservados 2021</marquee></h6></td>
+				<div class="privHold">
+                     <pre class="textPrivacy">&copy; 2021 by <a class="_link2" rel="nofollow" href="https://mascotacool2020.github.io/inicio">@.</a>Mascota Cool<br><span class="color4">Website Landing page </span> by <a class="_link2" rel="nofollow" href="https://www.facebook.com/fabriaguirre/">Fabricio Aguirre T.</a></pre>
+                 </div>
+                 </div>
+			</footer>
+           	<!--footer end-->
+            </div>
+		</div>
+</div>
+<script>
+$(window).load(function() {	
+	$('.page_spinner').fadeOut();
+	$('body').css({overflow:'auto', 'min-height':'800px'})
+})
+</script>
+</body>
+</html>
