@@ -3,7 +3,9 @@
 <head>
 </head>
 <body><p><h1>Hello World!!! my name is Fabricio A.
-  </h1></p><h2>Soy ingeniero agropecuario de profesión
+  </h1></p><h2>Soy ingeniero agropecuario de profesión.
+  <p>...</p>
+  <p>...</p>
   <figure class="_fig1"><img src="images/page1pic1.png" alt="">
   </figure>. Trabajo en el área agroindustrial y alimenticia.</h2></p>
   <p><h3>ayudemos cómo personas  que amen a la vida y la naturaleza en el mejor conjunto de participantes hacinados en un conglomerado</h3></p>
