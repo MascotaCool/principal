@@ -9,7 +9,8 @@
   <figure class="_fig1"><img src="images/page1pic1.png" alt="">
   </figure>. Trabajo en el área agroindustrial y alimenticia.</h2></p>
   <p><h3>ayudemos cómo personas  que amen a la vida y la naturaleza en construír y desarrollar estrategias, para lograr  el mejor conjunto de participantes hacinados en un conglomerado y hacerlos participar activamente en el camino conjunto llamado vida. </h3></p>
-  <p><h3></h3>a constriur desarrollo </h3</p>
-  <foot></foot>
+  <p><h5>a construir desarrollo </h5</p>
+  <p><audiocontrols></audiocontrols>dale al play play</p>
+  <foot>Está de Poner un videito</foot>
 </body>
 </html>
